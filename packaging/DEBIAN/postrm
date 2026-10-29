@@ -1,0 +1,8 @@
+#!/bin/sh
+if [ "$1" = remove ] || [ "$1" = purge ]; then
+    su mobile -c uicache 2>/dev/null || uicache 2>/dev/null
+fi
+if [ "$1" = purge ]; then
+    rm -f /var/mobile/Library/Preferences/uk.lbsi.motionwake.plist /var/mobile/Library/Logs/MotionWake.log*
+fi
+exit 0

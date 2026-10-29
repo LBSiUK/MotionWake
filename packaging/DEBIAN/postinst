@@ -1,0 +1,8 @@
+#!/bin/sh
+# Start (or restart) the daemon and show the app on the home screen.
+PLIST=/Library/LaunchDaemons/uk.lbsi.motionwake.plist
+launchctl unload "$PLIST" 2>/dev/null
+launchctl load "$PLIST"
+[ -f /var/mobile/Library/Preferences/uk.lbsi.motionwake.plist ] && chown 501:501 /var/mobile/Library/Preferences/uk.lbsi.motionwake.plist
+su mobile -c uicache 2>/dev/null || uicache 2>/dev/null
+exit 0

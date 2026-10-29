@@ -1,0 +1,4 @@
+#!/bin/sh
+# Stopping the daemon turns the camera off and lets the iPad sleep as normal.
+launchctl unload /Library/LaunchDaemons/uk.lbsi.motionwake.plist 2>/dev/null
+exit 0

@@ -1,0 +1,14 @@
+Package: uk.lbsi.motionwake
+Name: MotionWake
+Version: @VERSION@
+Architecture: iphoneos-arm
+Description: Turns the screen on when someone walks in.
+ While the iPad is plugged in, the front camera watches the room. Movement
+ turns the screen on; after two minutes with no movement it turns off
+ again. Never runs on battery. On battery it can also put the iPad to
+ sleep below a level you choose (30% by default). Set it up in the
+ MotionWake app.
+Maintainer: LBSiUK
+Author: LBSiUK
+Section: Utilities
+Depends: firmware (>= 9.0), uikittools
